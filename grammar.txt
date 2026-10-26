@@ -1,25 +1,34 @@
 # Rules of toy_pcfg2 from NLTK (nltk/grammar.py, Apache License 2.0),
-# without its probabilities.
+# extended for Stage 1 with a reduced relative clause, so that "the horse
+# raced past the barn fell" parses. The NP and VP rules carry probabilities
+# so that the grammar is consistent; equal shares would make it critical.
 S -> NP VP
-VP -> V NP
-VP -> V
-VP -> VP PP
-NP -> Det N
-NP -> Name
-NP -> NP PP
+VP -> V NP [0.5]
+VP -> V [0.4]
+VP -> VP PP [0.1]
+NP -> Det N [0.5]
+NP -> Name [0.3]
+NP -> NP PP [0.1]
+NP -> NP RC [0.1]
+RC -> Vpart PP
 PP -> P NP
 V -> saw
 V -> ate
 V -> ran
+V -> fell
+Vpart -> raced
 N -> boy
 N -> cookie
 N -> table
 N -> telescope
 N -> hill
+N -> horse
+N -> barn
 Name -> Jack
 Name -> Bob
 P -> with
 P -> under
+P -> past
 Det -> the
 Det -> a
 Det -> my
