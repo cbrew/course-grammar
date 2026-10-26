@@ -1,0 +1,25 @@
+# Rules of toy_pcfg2 from NLTK (nltk/grammar.py, Apache License 2.0),
+# without its probabilities.
+S -> NP VP
+VP -> V NP
+VP -> V
+VP -> VP PP
+NP -> Det N
+NP -> Name
+NP -> NP PP
+PP -> P NP
+V -> saw
+V -> ate
+V -> ran
+N -> boy
+N -> cookie
+N -> table
+N -> telescope
+N -> hill
+Name -> Jack
+Name -> Bob
+P -> with
+P -> under
+Det -> the
+Det -> a
+Det -> my

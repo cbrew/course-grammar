@@ -1,0 +1,9 @@
+# Stage 1. A line starting with + is a sentence your grammar must parse;
+# a line starting with - is one it must not.
++ Jack ran
++ Bob saw the boy
++ Jack ate a cookie under the table
++ Jack saw the boy with the telescope
++ the horse raced past the barn fell
+- horse the fell
+- raced the barn past
